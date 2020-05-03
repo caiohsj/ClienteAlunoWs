@@ -82,8 +82,8 @@ public class ControllerAluno {
     }
     
     private void acaoBotaoNovo() {
-       alunoAtual = null;
         botaoNovo.addActionListener((e) -> {
+            alunoAtual = null;
             botaoNovo.setEnabled(false);
             botaoExcluir.setEnabled(false);
             botaoEditar.setEnabled(false);
@@ -121,6 +121,8 @@ public class ControllerAluno {
             botaoExcluir.setEnabled(true);
             botaoEditar.setEnabled(true);
             botaoSalvar.setEnabled(false);
+            
+            inicializarTabela();
         });
     }
     
